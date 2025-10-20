@@ -12,7 +12,5 @@ public class Domicilio {
     public Integer numero;
     public Integer cp;
 
-    private Sucursal sucursal;
-
     private Localidad localidad;
 }

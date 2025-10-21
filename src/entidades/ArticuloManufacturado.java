@@ -1,3 +1,5 @@
+package entidades;
+
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -20,10 +22,4 @@ public class ArticuloManufacturado extends Articulo {
 
     @Builder.Default
     private Set<ArticuloManufacturadoDetalle> detalles = new HashSet<>();
-
-    public void addDetalle(ArticuloManufacturadoDetalle detalle) {
-        if (detalle != null) {
-            this.detalles.add(detalle);
-        }
-    }
 }

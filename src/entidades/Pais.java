@@ -1,3 +1,5 @@
+package entidades;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,9 +12,8 @@ import java.util.Set;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Pais {
-    public String nombre;
+    private Long id;
 
     @Builder.Default
     private Set<Provincia> provincias = new HashSet<>();

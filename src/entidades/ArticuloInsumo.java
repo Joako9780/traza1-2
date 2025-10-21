@@ -1,3 +1,5 @@
+package entidades;
+
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -13,6 +15,4 @@ public class ArticuloInsumo extends Articulo {
     private Integer stockActual;
     private Integer stockMaximo;
     private Boolean esParaElaborar;
-
-    private UnidadMedida unidadMedida;
 }

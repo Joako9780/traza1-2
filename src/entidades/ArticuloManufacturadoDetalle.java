@@ -1,3 +1,5 @@
+package entidades;
+
 import lombok.*;
 
 @Data

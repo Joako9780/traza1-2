@@ -1,3 +1,5 @@
+package entidades;
+
 import lombok.*;
 import java.time.LocalTime;
 import java.util.HashSet;
@@ -7,8 +9,10 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Sucursal {
+    private Long id;
     @EqualsAndHashCode.Include
     private String nombre;
     private LocalTime horarioApertura;

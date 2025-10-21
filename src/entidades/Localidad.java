@@ -1,3 +1,5 @@
+package entidades;
+
 import lombok.*;
 
 import java.util.HashSet;

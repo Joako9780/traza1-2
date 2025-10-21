@@ -15,119 +15,119 @@ public class Main {
                   TRAZA 1
         ======================== */
 
-        InMemoryRepository<Empresa> empresaRepository = new InMemoryRepository<>();
-
-        System.out.println(" ===== COMIENZA EJECUCION ===== ");
-
-        Pais argentina = Pais.builder()
-                .nombre("Argentina")
-                .build();
-
-        Provincia p1 = Provincia.builder()
-                .nombre("Buenos Aires")
-                .pais(argentina)
-                .build();
-
-        Provincia p2 = Provincia.builder()
-                .nombre("Cordoba")
-                .pais(argentina)
-                .build();
-
-        Localidad l1 = Localidad.builder()
-                .nombre("CABA")
-                .provincia(p1)
-                .build();
-
-        Localidad l2 = Localidad.builder()
-                .nombre("La plata")
-                .provincia(p1)
-                .build();
-
-        Localidad l3 = Localidad.builder()
-                .nombre("Cordoba Capital")
-                .provincia(p2)
-                .build();
-
-        Localidad l4 = Localidad.builder()
-                .nombre("Villa Carlos Paz")
-                .provincia(p2)
-                .build();
-
-        Domicilio d1 = Domicilio.builder()
-                .calle("Florencio Varela")
-                .numero(376)
-                .cp(4410)
-                .localidad(l1)
-                .build();
-
-        Domicilio d2 = Domicilio.builder()
-                .localidad(l2)
-                .calle("Calle 7")
-                .numero(1100)
-                .cp(1900)
-                .build();
-
-        Domicilio d3 = Domicilio.builder()
-                .localidad(l3)
-                .calle("25 de Mayo")
-                .numero(123)
-                .cp(5000)
-                .build();
-
-        Domicilio d4 = Domicilio.builder()
-                .localidad(l4)
-                .calle("Avenida San Martin")
-                .numero(500)
-                .cp(5152)
-                .build();
-
-        Sucursal s1 = Sucursal.builder()
-                .nombre("Limpito")
-                .horarioApertura(LocalTime.of(9, 0))
-                .horarioCierre(LocalTime.of(20, 0))
-                .domicilio(d1)
-                .build();
-
-        Sucursal s2 = Sucursal.builder()
-                .nombre("Limpito Emporio de la Limpieza")
-                .horarioApertura(LocalTime.of(8, 0))
-                .horarioCierre(LocalTime.of(19, 0))
-                .domicilio(d2)
-                .build();
-
-        Sucursal s3 = Sucursal.builder()
-                .nombre("Limpito Productos de Limpieza")
-                .horarioApertura(LocalTime.of(9, 0))
-                .horarioCierre(LocalTime.of(19, 0))
-                .domicilio(d3)
-                .build();
-
-        Sucursal s4 = Sucursal.builder()
-                .nombre("Limpito!")
-                .horarioApertura(LocalTime.of(8, 0))
-                .horarioCierre(LocalTime.of(20, 0))
-                .domicilio(d4)
-                .build();
-
-        Empresa e1 = Empresa.builder()
-                .nombre("Limpito Emporio de la Limpieza Buenos Aires")
-                .razonSocial("Limpito S.A")
-                .cuit(592380071L)
-                .logo("Cuidamos tu hogar")
-                .build();
-
-        Empresa e2 = Empresa.builder()
-                .nombre("Limpito Emporio de la Limpieza Cordoba")
-                .razonSocial("Limpito S.A")
-                .cuit(592380071L)
-                .logo("Animate a limpiar ahorrando")
-                .build();
-
-        e1.agregarSucursal(s1);
-        e1.agregarSucursal(s2);
-
-        e2.agregarSucursal(s3);
-        e2.agregarSucursal(s4);
+//        InMemoryRepository<Empresa> empresaRepository = new InMemoryRepository<>();
+//
+//        System.out.println(" ===== COMIENZA EJECUCION ===== ");
+//
+//        Pais argentina = Pais.builder()
+//                .nombre("Argentina")
+//                .build();
+//
+//        Provincia p1 = Provincia.builder()
+//                .nombre("Buenos Aires")
+//                .pais(argentina)
+//                .build();
+//
+//        Provincia p2 = Provincia.builder()
+//                .nombre("Cordoba")
+//                .pais(argentina)
+//                .build();
+//
+//        Localidad l1 = Localidad.builder()
+//                .nombre("CABA")
+//                .provincia(p1)
+//                .build();
+//
+//        Localidad l2 = Localidad.builder()
+//                .nombre("La plata")
+//                .provincia(p1)
+//                .build();
+//
+//        Localidad l3 = Localidad.builder()
+//                .nombre("Cordoba Capital")
+//                .provincia(p2)
+//                .build();
+//
+//        Localidad l4 = Localidad.builder()
+//                .nombre("Villa Carlos Paz")
+//                .provincia(p2)
+//                .build();
+//
+//        Domicilio d1 = Domicilio.builder()
+//                .calle("Florencio Varela")
+//                .numero(376)
+//                .cp(4410)
+//                .localidad(l1)
+//                .build();
+//
+//        Domicilio d2 = Domicilio.builder()
+//                .localidad(l2)
+//                .calle("Calle 7")
+//                .numero(1100)
+//                .cp(1900)
+//                .build();
+//
+//        Domicilio d3 = Domicilio.builder()
+//                .localidad(l3)
+//                .calle("25 de Mayo")
+//                .numero(123)
+//                .cp(5000)
+//                .build();
+//
+//        Domicilio d4 = Domicilio.builder()
+//                .localidad(l4)
+//                .calle("Avenida San Martin")
+//                .numero(500)
+//                .cp(5152)
+//                .build();
+//
+//        Sucursal s1 = Sucursal.builder()
+//                .nombre("Limpito")
+//                .horarioApertura(LocalTime.of(9, 0))
+//                .horarioCierre(LocalTime.of(20, 0))
+//                .domicilio(d1)
+//                .build();
+//
+//        Sucursal s2 = Sucursal.builder()
+//                .nombre("Limpito Emporio de la Limpieza")
+//                .horarioApertura(LocalTime.of(8, 0))
+//                .horarioCierre(LocalTime.of(19, 0))
+//                .domicilio(d2)
+//                .build();
+//
+//        Sucursal s3 = Sucursal.builder()
+//                .nombre("Limpito Productos de Limpieza")
+//                .horarioApertura(LocalTime.of(9, 0))
+//                .horarioCierre(LocalTime.of(19, 0))
+//                .domicilio(d3)
+//                .build();
+//
+//        Sucursal s4 = Sucursal.builder()
+//                .nombre("Limpito!")
+//                .horarioApertura(LocalTime.of(8, 0))
+//                .horarioCierre(LocalTime.of(20, 0))
+//                .domicilio(d4)
+//                .build();
+//
+//        Empresa e1 = Empresa.builder()
+//                .nombre("Limpito Emporio de la Limpieza Buenos Aires")
+//                .razonSocial("Limpito S.A")
+//                .cuit(592380071L)
+//                .logo("Cuidamos tu hogar")
+//                .build();
+//
+//        Empresa e2 = Empresa.builder()
+//                .nombre("Limpito Emporio de la Limpieza Cordoba")
+//                .razonSocial("Limpito S.A")
+//                .cuit(592380071L)
+//                .logo("Animate a limpiar ahorrando")
+//                .build();
+//
+//        e1.agregarSucursal(s1);
+//        e1.agregarSucursal(s2);
+//
+//        e2.agregarSucursal(s3);
+//        e2.agregarSucursal(s4);
 
         /* ========================
                   TRAZA 2

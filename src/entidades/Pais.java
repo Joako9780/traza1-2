@@ -14,6 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class Pais {
     private Long id;
+    private String nombre;
 
     @Builder.Default
     private Set<Provincia> provincias = new HashSet<>();
